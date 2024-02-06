@@ -1,3 +1,4 @@
+import { Empty } from './components/Empty';
 import { Header } from './components/Header';
 import { NewTask } from './components/NewTask';
 import { TasksCount } from './components/TasksCount';
@@ -15,6 +16,8 @@ export function App() {
         <NewTask />
 
         <TasksCount />
+
+        <Empty />
       </main>
     </div>
   );

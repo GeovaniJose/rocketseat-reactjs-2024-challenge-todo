@@ -9,7 +9,7 @@ export function TasksCount() {
       </div>
 
       <div>
-        <strong className={styles.title && styles.done}>Concluídas</strong>
+        <strong className={styles.title}>Concluídas</strong>
         <span className={styles.counter}>0</span>
       </div>
     </section>
