@@ -1,5 +1,6 @@
 import { Header } from './components/Header';
 import { NewTask } from './components/NewTask';
+import { TasksCount } from './components/TasksCount';
 
 import styles from './App.module.css';
 
@@ -13,7 +14,7 @@ export function App() {
       <main className={styles.wrapper}>
         <NewTask />
 
-        <h1>Todo List</h1>
+        <TasksCount />
       </main>
     </div>
   );

@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4rem 0 1rem;
+}
+
+.container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.container > div:first-child {
+  color: var(--blue-500);
+}
+
+.container > div:last-child {
+  color: var(--purple-500);
+}
+
+.container > div > .title {
+  font-size: 0.875rem;
+}
+
+.container > div > .counter {
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 1rem;
+  color: var(--gray-200);
+  background: var(--gray-400);
+}
