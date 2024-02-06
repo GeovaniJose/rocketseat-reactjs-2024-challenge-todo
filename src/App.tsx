@@ -1,4 +1,5 @@
 import { Header } from './components/Header';
+import { NewTask } from './components/NewTask';
 
 import styles from './App.module.css';
 
@@ -9,9 +10,11 @@ export function App() {
     <div>
       <Header />
 
-      <div className={styles.wrapper}>
+      <main className={styles.wrapper}>
+        <NewTask />
+
         <h1>Todo List</h1>
-      </div>
+      </main>
     </div>
   );
 }
