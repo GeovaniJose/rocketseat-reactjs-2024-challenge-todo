@@ -17,11 +17,20 @@ export interface TaskProps {
 }
 
 export function App() {
-  const [tasks, setTasks] = useState<TaskProps[]>([])
-  console.log('🚀  tasks', tasks);
+  const [tasks, setTasks] = useState<TaskProps[]>([]);
 
-  function onAddNewTask(task: TaskProps) {
-    setTasks(state => [...state, task])
+  function onAddNewTask(taskToAdd: TaskProps) {
+    setTasks(state => [...state, taskToAdd]);
+  }
+
+  function onRemoveTask(taskToRemove: TaskProps) {
+    setTasks(state => state.filter(task => task.id !== taskToRemove.id));
+  }
+
+  function onToggleCheck(taskToToggle: TaskProps) {
+    setTasks(state => state.map(task =>
+      task.id === taskToToggle.id ? { ...task, isChecked: !taskToToggle.isChecked } : task
+    ));
   }
 
   return (
@@ -34,7 +43,14 @@ export function App() {
         <TasksCount tasks={tasks} />
 
         {tasks.length
-          ? <Task />
+          ? tasks.map(task =>
+              <Task
+                key={task.id}
+                task={task}
+                onRemoveTask={onRemoveTask}
+                onToggleCheck={onToggleCheck}
+              />
+            )
           : <Empty />
         }
       </main>

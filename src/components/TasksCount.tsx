@@ -23,7 +23,7 @@ export function TasksCount({ tasks }: TasksCountProps) {
 
       <div>
         <strong className={styles.title}>Concluídas</strong>
-        <span className={styles.counter}>{checkedTasksCounter}</span>
+        <span className={styles.counter}>{checkedTasksCounter} de {tasksCounter}</span>
       </div>
     </section>
   );
