@@ -25,7 +25,7 @@ export function NewTask({ onAddNewTask }: NewTaskProps) {
     event.preventDefault();
 
     onAddNewTask({
-      id: 1,
+      id: Date.now(),
       title: newTaskValue,
       isChecked: false
     });

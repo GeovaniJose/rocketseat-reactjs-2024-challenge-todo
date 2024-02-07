@@ -31,7 +31,7 @@ export function App() {
       <main className={styles.wrapper}>
         <NewTask onAddNewTask={onAddNewTask} />
 
-        <TasksCount />
+        <TasksCount tasks={tasks} />
 
         {tasks.length
           ? <Task />
