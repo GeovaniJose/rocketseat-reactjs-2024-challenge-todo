@@ -1,6 +1,7 @@
 import { Empty } from './components/Empty';
 import { Header } from './components/Header';
 import { NewTask } from './components/NewTask';
+import { Task } from './components/Task';
 import { TasksCount } from './components/TasksCount';
 
 import styles from './App.module.css';
@@ -18,6 +19,8 @@ export function App() {
         <TasksCount />
 
         <Empty />
+
+        <Task />
       </main>
     </div>
   );

@@ -1,0 +1,69 @@
+.taskContainer {
+  width: 100%;
+  min-height: 4.75rem;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  background: var(--gray-500);
+}
+
+.taskContainer + .taskContainer {
+  margin-top: 0.75rem;
+}
+
+.taskContainer > label {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  padding: 3px;
+  gap: 0.75rem;
+}
+
+.taskContainer > label > input[type='checkbox'] {
+  display: none;
+}
+
+.taskContainer > label > .checkbox {
+  cursor: pointer;
+  color: var(--blue-500);
+}
+
+.taskContainer > label > .checkbox:hover {
+  color: var(--blue-700);
+}
+
+.taskContainer > label > .checkbox.checked {
+  color: var(--purple-700);
+}
+
+.taskContainer > label > .checkbox.checked:hover {
+  color: var(--purple-500);
+}
+
+.taskContainer > label > .title {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+}
+
+.taskContainer > label > .title.checked {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.taskContainer > button {
+  line-height: 0;
+  border: 0;
+  border-radius: 4px;
+  padding: 4px;
+  background: transparent;
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.taskContainer > button:hover {
+  color: var(--red-500);
+  background: var(--gray-400);
+}
